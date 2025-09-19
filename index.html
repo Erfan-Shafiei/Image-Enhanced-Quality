@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fa">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>افزایش کیفیت چند تصویر - نسخه نهایی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="blob1"></div>
+    <div class="blob2"></div>
+    <div class="blob3"></div>
+
+    <div class="container">
+        <h1>افزایش کیفیت چند تصویر</h1>
+
+        <div id="dropZone" class="drop-zone">فایل‌ها را اینجا رها کنید یا کلیک کنید</div>
+        <input id="files" type="file" accept="image/*" multiple style="display:none">
+
+        <input id="commonName" type="text" placeholder="نام مشترک فایل‌ها (اختیاری)">
+
+        <div class="custom-select-wrapper">
+            <button id="customSelectBtn">انتخاب فرمت خروجی</button>
+            <div id="customOptions" class="custom-options">
+                <div class="option active" data-value="jpeg">JPEG</div>
+                <div class="option" data-value="jpg">JPG</div>
+                <div class="option" data-value="png">PNG</div>
+                <div class="option" data-value="webp">WEBP</div>
+            </div>
+        </div>
+
+        <input id="zipName" type="text" placeholder="نام فایل ZIP خروجی">
+
+        <label for="qualityRange">کیفیت تصویر:</label>
+        <div class="range-wrapper">
+            <input id="qualityRange" type="range" min="1" max="100" value="90">
+            <span id="qualityValue">90%</span>
+        </div>
+
+        <div class="actions">
+            <button id="processBtn"><i class="fas fa-wand-magic-sparkles"></i> افزایش کیفیت</button>
+            <button id="downloadAll"><i class="fas fa-cloud-arrow-down"></i> دانلود ZIP</button>
+        </div>
+
+        <div class="progress">
+            <div class="bar" id="progressBar"></div>
+        </div>
+
+        <div id="gallery" class="gallery"></div>
+    </div>
+
+    <footer>
+        <p>این وبسایت توسط <a href="https://eko2.ir" target="_blank">عرفان شفیعی</a> توسعه داده شده و حق مالکیت آن محفوظ
+            است. برای حمایت مالی روی <a href="https://reymit.ir/eko2.ir">این لینک</a> کلیک کنید</p>
+    </footer>
+    <div id="toast" class="toast">پیام</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
